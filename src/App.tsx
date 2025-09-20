@@ -7,7 +7,7 @@ function App() {
     fetch("https://rino-backend.onrender.com/health")
       .then((res) => res.json())
       .then((data) => setStatus(data.status))
-      .catch((err) => setStatus("error"));
+      .catch(() => setStatus("error"));
   },[])
 
   return (
